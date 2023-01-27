@@ -10,4 +10,4 @@ RUN CGO_ENABLED=0 go build -o /go/bin/scan2webdav
 # Now copy it into our base image.
 FROM jbarlow83/ocrmypdf:latest
 COPY --from=build /go/bin/scan2webdav /bin
-CMD ["/bin/scan2webdav"]
+ENTRYPOINT [ "/bin/scan2webdav" ]
