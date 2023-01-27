@@ -137,7 +137,7 @@ func processFile(cfg Config, inFile string, wait bool) {
 		} else {
 			bodyBytes, err := io.ReadAll(res.Body)
 			if err != nil {
-				log.Fatal(err)
+				log.Println(err)
 			}
 			bodyString := string(bodyBytes)
 			log.Println(bodyString)
